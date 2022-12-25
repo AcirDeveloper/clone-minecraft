@@ -3,17 +3,26 @@ import { Sky } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import { Ground } from './components/Ground.jsx'
 import { FPV as Fpv } from './components/FPV.jsx'
+import { Player } from './components/Player.jsx'
+import { Cubes } from './components/Cubes.jsx'
+import { TextureSelect } from './components/TextureSelect.jsx'
 
 function App() {
     return (
-        <Canvas>
-            <Sky sunPosition={[20, 20, 20]} />
-            <ambientLight intensity={0.5} />
-            <Fpv />
-            <Physics>
-                <Ground />
-            </Physics>
-        </Canvas>
+        <>
+            <Canvas>
+                <Sky sunPosition={[100, 100, 50]} />
+                <ambientLight intensity={0.5} />
+                <Fpv />
+                <Physics>
+                    <Cubes />
+                    <Player />
+                    <Ground />
+                </Physics>
+            </Canvas>
+            <TextureSelect />
+            <div className='pointer'>+</div>
+        </>
     )
 }
 

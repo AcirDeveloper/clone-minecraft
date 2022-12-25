@@ -10,9 +10,9 @@ body,
     margin: 0;
     padding: 0;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     overflow: hidden;
 }
 
@@ -27,4 +27,36 @@ body {
     overflow: hidden;
 }
 
-/* Path: src/App.css */
+.pointer {
+    color: blueviolet;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texture-selector {
+    bottom: 32px;
+    background: lightgray;
+    padding: 8px;
+    border: 3px solid #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.texture-selector img {
+    width: 50px;
+    z-index: 100;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+    border: 3px solid #000;
+}
+
+.texture-selector img.selected {
+    border-color: aqua;
+}
