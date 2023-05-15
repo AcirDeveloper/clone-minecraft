@@ -1,4 +1,5 @@
-# clon-minecraft
+# Clon Minecraft
 
 Con tailwind, react.
-# clone-minecraft
+
+Proyecto al 30%, Inspirado en Midudev.
